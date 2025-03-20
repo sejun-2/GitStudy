@@ -9,6 +9,8 @@
             string input = Console.ReadLine();
 
             Console.WriteLine("입력하신 이름은 {0} 입니다.", input);
+
+            Console.WriteLine("대충");
         }
     }
 }
