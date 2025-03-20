@@ -1,16 +1,26 @@
-﻿namespace GItStudy
+﻿using System.Diagnostics.Metrics;
+
+namespace GItStudy
 {
     internal class Program
     {
         static void Main(string[] args)
         {
+            string my_string = "abcde";
+            string letter = "b";
 
-            Console.Write("이름을 입력해 주세요 : ");
-            string input = Console.ReadLine();
+            string answer = "";
+            answer = my_string.Replace(letter, "");     // Replace -> letter를 "" 로  교체. 
 
-            Console.WriteLine("입력하신 이름은 {0} 입니다.", input);
+            Console.WriteLine(answer);      // 글자 하나하나 따로 인식하지는 않음. 통으로 같은지 비교
 
-            Console.WriteLine("대충");
+
+
+
+
+
+
+
         }
     }
 }
