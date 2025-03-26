@@ -64,7 +64,7 @@ namespace _19.ExtensionMethod
 
         public static bool IsOddNumber(this int number)
         {
-            return number % 2 != 0;
+            return number % 2 != 0;     // 2 로 나눈 나머지가 0 이 아니면 true
         }
 
 
