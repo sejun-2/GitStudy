@@ -23,14 +23,14 @@
         }
 
 
-        //static void Main(string[] args)
-        //{
-        //    Car sportCar = new Car("스포츠카", 100);
-        //    Car truck = new Car("트럭", 30);
+        static void Main(string[] args)
+        {
+            Car sportCar = new Car("스포츠카", 100);
+            Car truck = new Car("트럭", 30);
 
-        //    sportCar.Move();
-        //    truck.Move();
-        //}
+            sportCar.Move();
+            truck.Move();
+        }
 
 
 
@@ -82,14 +82,14 @@
         }
 
 
-        static void Main(string[] args)
-        {
-            Skill skill1 = new FireBall();
-            Skill skill2 = new Smash();
-            skill1.Execute();
-            skill2.Execute();
+        //static void Main(string[] args)
+        //{
+        //    Skill skill1 = new FireBall();
+        //    Skill skill2 = new Smash();
+        //    skill1.Execute();
+        //    skill2.Execute();
 
-        }
+        //}
 
 
         // <다형성 사용의미1>

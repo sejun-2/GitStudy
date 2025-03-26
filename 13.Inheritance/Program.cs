@@ -2,21 +2,23 @@
 {
     internal class Program
     {
-        // 상속(Inheritance)
-        // 부모클래스의 모든 기능을 가지는 자식클래스를 설계하는 방법
-        // is-a 관계 : 부모클래스가 자식클래스를 포함하는 상위개념일 경우 상속관계가 적합함
+        /*
+        상속(Inheritance)
+         부모클래스의 모든 기능을 가지는 자식클래스를 설계하는 방법
+         is-a 관계 : 부모클래스가 자식클래스를 포함하는 상위개념일 경우 상속관계가 적합함
 
-        // <상속>
-        // 부모클래스를 상속하는 자식클래스에게 부모클래스의 모든 기능을 부여
-        // class 자식클래스 : 부모클래스
+         <상속>
+         부모클래스를 상속하는 자식클래스에게 부모클래스의 모든 기능을 부여
+         class 자식클래스 : 부모클래스
 
-        // 상속 사용의미1
-        // 상속을 진행하는 경우 부모클래스의 소스가 자식클래스에서 모두 적용됨
-        // 부모클래스와 자식클래스의 상속관계가 적합한 경우 부모클래스에서의 기능 구현이 자식클래스에서도 어울림
+         상속 사용의미1
+         상속을 진행하는 경우 부모클래스의 소스가 자식클래스에서 모두 적용됨
+         부모클래스와 자식클래스의 상속관계가 적합한 경우 부모클래스에서의 기능 구현이 자식클래스에서도 어울림
 
-        //상속 사용의미2
-        // 업캐스팅을 통해 자식클래스는 부모클래스로 형변환이 가능합
-        // 자식클래스는 부모클래스를 요구하는 곳에서 동일한 기능을 수행할 수 있음
+        상속 사용의미2
+         업캐스팅을 통해 자식클래스는 부모클래스로 형변환이 가능합
+         자식클래스는 부모클래스를 요구하는 곳에서 동일한 기능을 수행할 수 있음
+        */
 
         class Monster
         {
@@ -41,7 +43,7 @@
         }
 
         // 100 종류의 몬스터가 있다고 가정
-        class Slime : Monster
+        class Slime : Monster	// : Monster 로 Monster 클래스를 상속 받음
         {
             public Slime()
             {
@@ -55,18 +57,18 @@
             }
         }
 
-        class Dragon : Monster
+        class Dragon : Monster	// : Monster 로 Monster 클래스를 상속 받음
         {
-            //public float flyingSpeed;
-           // public float speed;             // 부모 클래스와 똑같은 이름의 변수 사용가능.
+            public float flyingSpeed;
+            public float speed;             // 부모 클래스와 똑같은 이름의 변수 사용가능.
 
             public Dragon()
             {
                 name = "드래곤";
                 hp = 100;
                 speed = 10.0f;
-                //base.speed = 10f;          // 부모클래스의 변수에 접근할 때 base 키워드 사용
-                //this.speed = 5.5f;         // 자식클래스의 변수에 접근할 때 this 키워드 사용
+                base.speed = 10f;          // 부모클래스의 변수에 접근할 때 base 키워드 사용
+                this.speed = 5.5f;         // 자식클래스의 변수에 접근할 때 this 키워드 사용
             }
             public void Breath()
             {
@@ -117,16 +119,16 @@
 
             /*********************************************************************************/
 
-            //Slime slime = new Slime();
-            //Dragon dragon = new Dragon();
+            Slime slime = new Slime();
+            Dragon dragon = new Dragon();
 
             //부모클래스 Monster를 상속한 자식클래스는 모두 부모클래스의 기능을 가지고 있음
-            //slime.Move();
-            //dragon.Move();
+            slime.Move();
+            dragon.Move();
 
             // 자식클래스는 부모클래스의 기능에 더해 자식만의 고유 기능을 추가하여 구현 가능
-            //slime.Split();
-            ///dragon.Breath();
+            slime.Split();
+            dragon.Breath();
 
             // 업캐스팅(자동으로 가능) : 자식클래스는 부모클래스 자료형으로 암시적 형변환 가능
             Monster monster = new Slime();
@@ -134,20 +136,20 @@
             //monster2.Breath();      // 부모클래스로 형변환했을 때 자식클래스의 고유 기능은 사용 불가능
             //monster.Split();        // 부모클래스로 형변환했을 때 자식클래스의 고유 기능은 사용 불가능
 
-            //Item[] inventory = new Item[20];
-            //inventory[0] = new Potion();
-            //inventory[1] = new Weapon();
+            Item[] inventory = new Item[20];
+            inventory[0] = new Potion();
+            inventory[1] = new Weapon();
 
             // 다운캐스팅 (불가능한 경우가 있기 때문에 확인 후에 변환 가능)
             // is : 형변환이 가능하면 true, 불가능하면 false 반환
             if (monster is Slime)       // monster가 Slime이 맞는지 확인
             {
-                Slime slime = (Slime)monster;      
+                //Slime slime = (Slime)monster;      
                 slime.Split();
             }
             else if (monster is Dragon)     // monster가 Dragon이 맞는지 확인
             {
-                Dragon dragon = (Dragon)monster;
+                //Dragon dragon = (Dragon)monster;
                 dragon.Breath();
             }
 
@@ -159,10 +161,10 @@
 
 
             Player player = new Player();
-            //player.Attack(slime);
-            //player.Attack(dragon);
+            player.Attack(slime);
+            player.Attack(dragon);
 
-            
+
             player.Test(10);
             player.Test(3.5f);
 
@@ -197,11 +199,6 @@
             {
 
             }
-
-            //public void UseSkill(Skill skill)
-            //{
-            //}
-
 
         }
 
