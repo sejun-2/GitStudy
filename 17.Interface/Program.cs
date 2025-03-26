@@ -4,8 +4,8 @@ namespace _17.Interface
 {
     internal class Program
     {
-        // 인터페이스 (Interface)
-        //인터페이스는 맴버를 가질 수 있지만 직접 구현하지 않음. 단지 정의만을 가짐.
+        //인터페이스(Interface)
+        // 인터페이스는 맴버를 가질 수 있지만 직접 구현하지 않음.단지 정의만을 가짐.
         // 인터페이스를 가지는 클래스에서 반드시 인터페이스의 정의를 구현해야함.
         // 이를 반대로 표현하자면 인터페이스를 포함하는 클레스는
         // 반드시 인터페이스의 구성요소들을 구현했다는 것을 보장함.
@@ -15,9 +15,9 @@ namespace _17.Interface
         // <인터페이스의 정의>
         // 일반적으로 인터페이스의 이름은 I로 시작함. - 국룰!
         // 인터페이스의 함수는 직접 구현하지 않고 정의만 진행.
-        public interface IEnterable
+        public interface IEnterable     // 인터페이스 선언
         {
-            public void Enter();
+            public void Enter();        // 구현하지 않고 정의만 함
         }
 
         public interface IOpenable
