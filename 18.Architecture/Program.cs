@@ -3,7 +3,7 @@
     internal class Program
     {
         /*
-            추상클래스와 인터페이스
+            추상클래스(Architecture)와 인터페이스(Interface)
             인터페이스는 추상클래스의 일종으로 특징이 동일함
             함수에 대한 선언만 정의하고 이를 포함하는 클래스에서 구체화하여 사용
             하지만, 추상클래스와 인터페이스를 통해 얻는 효과는 다르며 다른 역할을 수행함
@@ -26,24 +26,24 @@
         // 인터페이스를 사용하는 모든 클래스와 상호작용이 가능한 효과를 얻을 수 있음.
         // 인터페이스에 정의된 함수들을 클래스의 목적에 맞게 기능을 구현하는 경우 사용.
 
-        public interface IEnterable
+        public interface IEnterable     //인터페이스
         {
             void Enter();
         }
 
         // 은행은 건물이다 : OK, 상속관계가 적합
-        public abstract class Building : IEnterable
+        public abstract class Building : IEnterable     //IEnterable 상속
         {
-            public void Enter()
+            public void Enter()                         // Enter 함수를 꼭 구현해야함
             {
-                Console.WriteLine("건물에 들어갑니다.");
+                Console.WriteLine("건물에 들어갑니다.");    
             }
         }
 
         // 차는 들어갈 수 있다 : OK, 인터페이스가 적합
-        public class Car : IEnterable
+        public class Car : IEnterable            //IEnterable 상속
         {
-            public void Enter()
+            public void Enter()                  // Enter 함수를 꼭 구현해야함
             {
                 Console.WriteLine("차 문을 열고 들어갑니다.");
             }
@@ -52,9 +52,9 @@
         /******************************************************************************/
 
 
-        public interface IDamageable
+        public interface IDamageable                //인터페이스
         {
-            public void TakeDamage(int damage);
+            public void TakeDamage(int damage);     // 함수 정의
         }
 
         public class Player
@@ -76,7 +76,7 @@
         {
             public int attackPoint = 10;
 
-            public void Attack(IDamageable damageable)  // (Player player)로도 가능 그럴경우 점프 함수 사용 가능
+            public void Attack(IDamageable damageable)  // (Player player)로도 가능 그럴경우, Jump() 함수까지 사용 가능
             {
                 damageable.TakeDamage(attackPoint);
                 //damageable.Jump();       // 인터페이스에는 Jump가 정의 되어 있지 않아 사용 불가
@@ -88,7 +88,7 @@
         {
             int[] array = new int[5] { 1, 2, 3, 4, 5};
 
-            IReadOnlyList<int> list = array.AsReadOnly();   // 읽기 전용 리스트로 변환
+            IReadOnlyList<int> list = array.AsReadOnly();   // 읽기 전용 리스트로 변환 !!
 
 
 
