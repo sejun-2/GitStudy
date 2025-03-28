@@ -37,13 +37,13 @@ namespace _23.DataStructure
         // 가장 높은 차수의 계수와 나머지 모든 항을 제거하고 표기
         // 알고리즘의 대략적인 효율을 파악할 수 있는 수단
 
-        int Case1(int n)
+        int Case1(int n)    // O(1) 
         {
             int sum = 0;
             sum = n * n;
             return sum;
         }
-        int Case2(int n)
+        int Case2(int n)    // O(n) 
         {
             int sum = 0;
             for (int i = 0; i < n; i++)
@@ -52,7 +52,7 @@ namespace _23.DataStructure
             }
             return sum;
         }
-        int Case3(int n)
+        int Case3(int n)        // O(n²)
         {
             int sum = 0;
             for (int i = 0; i < n; i++)
@@ -64,6 +64,17 @@ namespace _23.DataStructure
             }
             return sum;
         }
+
+        // 입력값       Case1        Case2          Case3
+        //     1            1           1              1
+        //    10            1          10            100
+        //   100            1         100         10,000
+        //  1000            1        1000      1,000,000
+        //     n            1           n             n²
+        // Big-O         O(1)        O(n)          O(n²)
+
+
+
 
         //<수행 시간 분석>
         // 알고리즘의 성능은 상황에 따라 수행 시간이 달라짐

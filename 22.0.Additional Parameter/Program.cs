@@ -1,8 +1,8 @@
-﻿namespace _22.Additional
+﻿namespace _22._0.Additional_Parameter
 {
     internal class Program
     {
-        // <Named Parameter>
+        // <Named Parameter> 
         // 함수의 매개변수 순서와 무관하게 이름을 통해 호출
         public static void Profile(int id, string name, string phone) { }
 
@@ -11,8 +11,8 @@
             Profile(10, "김전사", "010-1111-2222");
 
             //함수 호출시 이름을 명명하고 순서와 상관없이 호출 가능
-            Profile(name:"김전사", phone:"010-1111-2222", id:10);
-            Profile(phone: "010-1111-2222",name: "김전사", id: 10);
+            Profile(name: "김전사", phone: "010-1111-2222", id: 10);
+            Profile(phone: "010-1111-2222", name: "김전사", id: 10);
         }
 
 
@@ -29,7 +29,7 @@
             AddStudent("철수");               // AddStudent("철수", "서울", 8)
             AddStudent("영희");               // AddStudent("영희", "서울", 8)
             AddStudent("민주", "인천");       // AddStudent("민주", "인천", 8)
-            AddStudent("미영", age:10);       // AddStudent("미영", "서울", 10)
+            AddStudent("미영", age: 10);       // AddStudent("미영", "서울", 10)
         }
 
 
