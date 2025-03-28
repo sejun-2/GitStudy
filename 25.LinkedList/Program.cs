@@ -93,15 +93,15 @@
 
             // 삭제 - 연결을 끊고 잇는 작업
             linkedList.Remove(node1);                   // 0(1)
-            linkedList.RemoveFirst();
-            linkedList.RemoveLast();
-            linkedList.Remove("1번 데이터");
+            linkedList.RemoveFirst();                   // 0(1)
+            linkedList.RemoveLast();                    // 0(1)
+            linkedList.Remove("1번 데이터");             // 0(n) - 찾아서 지우기 때문에 좀더 느림
 
 
             //접근
             // LinkedList[2] : 연결리스트는 인덱스가 없다 (연속적으로 저장하지 않기 때문에 인덱스 사용이 불가능하다)
-            LinkedListNode<string> preNode = node1.Previous;
-            LinkedListNode<string> nextNode = node1.Next;
+            LinkedListNode<string> preNode = node1.Previous;        // 이전 노드를 가르킴
+            LinkedListNode<string> nextNode = node1.Next;           // 다음 노드를 가르킴
             LinkedListNode<string> firstNode = linkedList.First;
             LinkedListNode<string> lastNode = linkedList.Last;
 
@@ -109,6 +109,32 @@
             //탐색
             LinkedListNode<string> findNode = linkedList.Find("1번 데이터");
             bool contain = linkedList.Contains("1번 데이터");  // 못찾으면 null 이 나옴.
+
+            int[] array = new int[8];
+            for (int i=0; i<array.Length; i++)
+            {
+                Console.WriteLine(array[i]);
+            }
+
+
+            foreach (int value in array)        // 처음부터 끝까지 돌린다.
+            {
+                Console.WriteLine(value);
+            }
+
+
+
+            LinkedList<int> list = new LinkedList<int>();
+            for (LinkedListNode<int> node = list.First; node != null; node = node.Next)
+            {
+                Console.WriteLine(node.Value);
+            }
+
+            foreach (int value in list)     // 어떻게 되어 있는지 몰라도, 처음부터 끝까지 돌린다.
+            {
+                Console.WriteLine(value);
+            }
+
         }
 
 
