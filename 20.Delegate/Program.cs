@@ -14,10 +14,7 @@ namespace _20.Delegate
     public delegate float DelegateMethod1(float left, float right);     // 함수를 대신 실행시킬 뿐이라서 { } 내용은 필요 없음
     public delegate void DelegateMethod2(string str);
 
-    public enum Type { }
-    public struct GameData { }
-    public class Player { }
-    
+  
 
 
     internal class Program
@@ -54,14 +51,6 @@ namespace _20.Delegate
             Console.WriteLine(delegate1(20f, 10f));     // Multi(20f, 10f) = 200
             delegate1 = Divide;
             Console.WriteLine(delegate1(20f, 10f));     // Divide(20f, 10f) = 2
-
-
-
-
-
-
-
-
 
         }
     }

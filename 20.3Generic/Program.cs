@@ -1,6 +1,4 @@
-﻿using static _20._2Generic.Program;
-
-namespace _20._2Generic
+﻿namespace _20._3Generic
 {
     internal class Program
     {
@@ -27,7 +25,7 @@ namespace _20._2Generic
         void Message2(string message) { Console.WriteLine(message); }
 
 
-        public 
+        public
         static void Main(string[] args)
         {
             //StringDelegate stringDelegate = Message;

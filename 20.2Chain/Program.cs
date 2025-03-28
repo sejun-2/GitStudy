@@ -10,7 +10,7 @@
         static void Main(string[] args)
         {
             Action action;
-            action = Func1;      // 델리게이트에 Func1 참조
+            action = Func1;      // 델리게이트에 Func1 로 초기화
             action += Func2;     // 델리게이트에 Func2 추가 참조
             action += Func3;     // 델리게이트에 Func3 추가 참조
             action += Func2;     // 같은 Func 중복 참조도 가능
