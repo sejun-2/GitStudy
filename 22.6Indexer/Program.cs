@@ -2,7 +2,7 @@
 {
     internal class Program
     {
-        // <인덱서 정의>
+        // <인덱서(Indexer) 정의>
         // this[]를 속성으로 정의하여 클래스의 인스턴스에 인덱스 방식으로 접근 허용
         public class IndexerArray
         {
