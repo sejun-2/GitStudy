@@ -76,12 +76,12 @@
             queue.Enqueue(5);
 
             // 꺼내기 : 0(1)
-            Console.WriteLine(queue.Dequeue());
-            Console.WriteLine(queue.Dequeue());
-            Console.WriteLine(queue.Dequeue());
+            Console.WriteLine(queue.Dequeue());     // 1
+            Console.WriteLine(queue.Dequeue());     // 2
+            Console.WriteLine(queue.Dequeue());     // 3
 
             // 꺼내지 않고 확인만!!
-            Console.WriteLine(queue.Peek());
+            Console.WriteLine(queue.Peek());        // 4
 
             queue.Enqueue(6);
             queue.Enqueue(7);
@@ -90,7 +90,7 @@
 
             while (queue.Count > 0)
             {
-                Console.WriteLine(queue.Dequeue());
+                Console.WriteLine(queue.Dequeue());     // 4, 5, 6, 7, 8, 9
             }
 
 

@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;       // 제네릭 컬렉션을 사용하겠다.
+﻿using System.Collections.Generic;       // Generic(제네릭) 컬렉션을 사용하겠다.
 
 namespace _23.DataStructure
 {
@@ -38,7 +38,7 @@ namespace _23.DataStructure
          */
 
         //<알고리즘 평가 기준>
-        // 컴퓨터에서 알고리즘과 자료구조의 편가는 시간과 공간 두 자원을 얼마나 소모하는지가 효율성의 중점
+        // 컴퓨터에서 알고리즘과 자료구조의 평가는 시간과 공간 두 자원을 얼마나 소모하는지가 효율성의 중점
         // 일반적으로 시간을 위해 공간이 희생되는 경우가 많음
         // 시간복잡도 : 알고리즘의 시간적 자원 소모량
         // 공간복잡도 : 알고리즘의 공간적 자원 소모량
