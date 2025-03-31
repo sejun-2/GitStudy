@@ -4,7 +4,7 @@ namespace _0328.Practice
 {
     internal class Program
     {
-
+        // 요세푸스 문제
         public static int Yosepus(int n, int k)
         {
             Queue<int> queue = new Queue<int>(n);
@@ -31,6 +31,7 @@ namespace _0328.Practice
             return queue.Dequeue();
         }
 
+        // 괄호 검사기
         public static bool IsCorrectBracket(string str)
         {
             Stack<char> stack = new Stack<char>();
@@ -95,6 +96,7 @@ namespace _0328.Practice
             int k = 5;
             int result = Yosepus(n, k);
             Console.WriteLine("요세푸스({0}, {1}) 의 결과는 : {2}", n, k, result);
+
 
             string str = "[]]";
             Console.WriteLine("괄호 검사기의 결과는: {0}", IsCorrectBracket(str));
