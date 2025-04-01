@@ -4,22 +4,6 @@
     {
         static void Main(string[] args)
         {
-            GraphNode<int> node0 = new GraphNode<int>(0);
-            GraphNode<int> node1 = new GraphNode<int>(1);
-            GraphNode<int> node2 = new GraphNode<int>(2);
-            GraphNode<int> node3 = new GraphNode<int>(3);
-            GraphNode<int> node4 = new GraphNode<int>(4);
-            GraphNode<int> node5 = new GraphNode<int>(5);
-            GraphNode<int> node6 = new GraphNode<int>(6);
-            GraphNode<int> node7 = new GraphNode<int>(7);
-
-            node0.AddEdge(node3);
-            node3.AddEdge(node0);
-            node0.AddEdge(node4);
-            node4.AddEdge(node0);
-
-
-
             /************************************************************************
             * 그래프 (Graph)
             * 
@@ -116,9 +100,19 @@
 
             /************************************************************************************/
 
+            GraphNode<int> node0 = new GraphNode<int>(0);
+            GraphNode<int> node1 = new GraphNode<int>(1);
+            GraphNode<int> node2 = new GraphNode<int>(2);
+            GraphNode<int> node3 = new GraphNode<int>(3);
+            GraphNode<int> node4 = new GraphNode<int>(4);
+            GraphNode<int> node5 = new GraphNode<int>(5);
+            GraphNode<int> node6 = new GraphNode<int>(6);
+            GraphNode<int> node7 = new GraphNode<int>(7);
 
-
-
+            node0.AddEdge(node3);
+            node3.AddEdge(node0);
+            node0.AddEdge(node4);
+            node4.AddEdge(node0);
 
         }
 

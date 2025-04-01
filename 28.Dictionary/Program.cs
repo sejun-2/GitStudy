@@ -169,10 +169,6 @@ namespace _28.Dictionary
 
             monsterDic["피카츄"] = new Monster("피카츄", 1);  // 탐색 후 대입(없을 시 add), 있을시 변경
 
-
-            
-
-
         }
     }
 }
