@@ -15,7 +15,7 @@ namespace _30.TextRPG.Scenes
             input = Console.ReadKey(true).Key;
         }
         public abstract void Render();
-        public abstract void SelectChoice();
+        public abstract void Choice();
         public abstract void Result();
         public abstract void Wait();
         public abstract void Next();

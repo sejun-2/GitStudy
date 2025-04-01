@@ -25,6 +25,7 @@ namespace _30.TextRPG
             // 게임에 있는 모든 씬들을 보관하고 빠르게 찾아줄 용도로 쓸 자료구조
             sceneDic = new Dictionary<string, Scene>();
             sceneDic.Add("Title", new TitleScene());
+            sceneDic.Add("Town", new TownScene());
 
             // 처음 시작할 씬을 선정
             CurScene = sceneDic["Title"];
@@ -45,7 +46,7 @@ namespace _30.TextRPG
             while (gameOver == false)
             {
                 CurScene.Render();
-                CurScene.SelectChoice();
+                CurScene.Choice();
                 CurScene.Input();
                 CurScene.Result();
                 CurScene.Wait();
@@ -54,6 +55,10 @@ namespace _30.TextRPG
             }
         }
 
+        public static void ChangeScene(string sceneName)
+        {
+            CurScene = sceneDic[sceneName];
+        }
 
     }
 }
