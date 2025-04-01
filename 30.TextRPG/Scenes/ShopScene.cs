@@ -28,6 +28,11 @@ namespace _30.TextRPG.Scenes
         {
             switch (input)
             {
+                case ConsoleKey.D3:
+                    Console.WriteLine("당신은 상인을 위협하고 돈을 내놓으로 소리쳤습니다.");
+                    Console.WriteLine("하지만 상인이 당신보다 더 레벨이 높았습니다.");
+                    Console.WriteLine("상인이 휘두른 공격에 당신은 한방에 나가 떨어졌습니다.");
+                    break;
                 case ConsoleKey.D4:
                     Console.WriteLine("마을로 돌아갑니다.");
                     break;
@@ -47,6 +52,10 @@ namespace _30.TextRPG.Scenes
         {
             switch (input)
             {
+                case ConsoleKey.D3:
+                    Game.GameOver("레벨이 낮으면서 함부로 나대지 맙시다...");
+                    break;
+
                 case ConsoleKey.D4:
                     Game.ChangeScene("Town");
                     break;

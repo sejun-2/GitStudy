@@ -61,6 +61,10 @@ namespace _30.TextRPG.Scenes
                 case ConsoleKey.D1:
                     Game.ChangeScene("Shop");
                     break;
+                case ConsoleKey.D2:
+                    Game.GameOver("수상한 사람은 함부로 쫓지 않도록 합시다....");
+                    break;
+
             }
         }
     }

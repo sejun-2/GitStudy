@@ -14,7 +14,7 @@ namespace _30.TextRPG.Scenes
             Console.WriteLine("******************************");
             Console.WriteLine("*          레전드 RPG         *");
             Console.WriteLine("******************************");
-            Console.WriteLine("");
+            Console.WriteLine();
         }
 
         public override void Result()
