@@ -26,6 +26,7 @@ namespace _30.TextRPG
             sceneDic = new Dictionary<string, Scene>();
             sceneDic.Add("Title", new TitleScene());
             sceneDic.Add("Town", new TownScene());
+            sceneDic.Add("Shop", new ShopScene());
 
             // 처음 시작할 씬을 선정
             CurScene = sceneDic["Title"];
@@ -45,12 +46,20 @@ namespace _30.TextRPG
             // 게임 동작시에 필요한 작업들
             while (gameOver == false)
             {
+                Console.Clear();
+
                 CurScene.Render();
+                Console.WriteLine();
                 CurScene.Choice();
+                Console.WriteLine();
                 CurScene.Input();
+                Console.WriteLine();
                 CurScene.Result();
+                Console.WriteLine();
                 CurScene.Wait();
+                Console.WriteLine();
                 CurScene.Next();
+                Console.WriteLine();
 
             }
         }

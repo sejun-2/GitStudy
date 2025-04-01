@@ -8,20 +8,20 @@ namespace _30.TextRPG.Scenes
 {
     internal class TownScene : Scene
     {
-        public override void Choice()
-        {
-            Console.WriteLine("1. 상인에게 간다.");
-            Console.WriteLine("2. 멀리서 수상한 남성을 주시한다.");
-            Console.WriteLine("3. 일단 파밍이지, 필드로 나간다.");
-            Console.WriteLine("");
-        }
-
-
+        
         public override void Render()   // 처음 화면 
         {
             Console.WriteLine("사람들이 북적거리는 마을이다..");
             Console.WriteLine("여러 상인들이 물건을 팔고 있다...");
             Console.WriteLine("멀리서는 수항해 보이는 남성이 눈치를 보고 있다...");
+            Console.WriteLine("");
+        }
+
+        public override void Choice()
+        {
+            Console.WriteLine("1. 상인에게 간다.");
+            Console.WriteLine("2. 멀리서 수상한 남성을 주시한다.");
+            Console.WriteLine("3. 일단 파밍이지, 필드로 나간다.");
             Console.WriteLine("");
         }
 
@@ -58,8 +58,8 @@ namespace _30.TextRPG.Scenes
         {
             switch (input)
             {
-                case ConsoleKey.Spacebar:
-                    Game.ChangeScene("Title");
+                case ConsoleKey.D1:
+                    Game.ChangeScene("Shop");
                     break;
             }
         }

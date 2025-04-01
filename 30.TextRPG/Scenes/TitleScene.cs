@@ -37,9 +37,11 @@ namespace _30.TextRPG.Scenes
             // TODO : 다음 씬으로 전환 구현 필요
             // todo (투두 주석) -> 작업 목록에서 볼 수 있음. (보기 -> 작업목록)
 
-            switch ()
+            switch (input)
             {
-
+                case ConsoleKey.D1:
+                    Game.ChangeScene("Town");
+                    break;
             }
         }
     }
