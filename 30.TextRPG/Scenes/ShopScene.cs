@@ -35,6 +35,9 @@ namespace _30.TextRPG.Scenes
                     Console.WriteLine("플레이어 스탯 상승! 속도 : {0}", Game.Player.Speed);
                     break;
                 case ConsoleKey.D3:
+                    Random random = new Random(); // 랜덤 클래스
+                    int value = random.Next(0,100); // 0이상 100 미만 출력
+
                     Console.WriteLine("당신은 상인을 위협하고 돈을 내놓으로 소리쳤습니다.");
                     Console.WriteLine("하지만 상인이 당신보다 더 레벨이 높았습니다.");
                     Console.WriteLine("상인이 휘두른 공격에 당신은 한방에 나가 떨어졌습니다.");
