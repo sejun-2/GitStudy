@@ -10,12 +10,13 @@ namespace _30.TextRPG.Scenes
     {
         // 입력을 받아줄 변수
         protected ConsoleKey input; // 모든 Scene 에서 쓸거니 protected
+        
+        public abstract void Render();
+        public abstract void Choice();
         public void Input()    // 모든 Scene 에서 쓸거니 다 쓸수 있도록 구현
         {
             input = Console.ReadKey(true).Key;
         }
-        public abstract void Render();
-        public abstract void Choice();
         public abstract void Result();
         public abstract void Wait();
         public abstract void Next();
