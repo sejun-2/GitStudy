@@ -10,6 +10,7 @@ namespace _30.TextRPG.Scenes
     {
         public override void Render()
         {
+            Game.PrintInfo();
             Console.WriteLine("\"어서오세요\"");
             Console.WriteLine("\"좋은 물건 많습니다~\"");
             Console.WriteLine("상점에는 다양한 물건들이 늘어져 있다.");

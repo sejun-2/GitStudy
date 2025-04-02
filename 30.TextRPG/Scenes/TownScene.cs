@@ -51,7 +51,6 @@ namespace _30.TextRPG.Scenes
                         Console.WriteLine("당신은 단검을 피하기에 충분히 빠르지 못했습니다.");
                         Console.WriteLine("당신은 그것을 미쳐 피하지 못했습니다...");
                     }
-                    
                     break;
                 case ConsoleKey.D3: // 숫자 3
                     Console.WriteLine("필드로 나갑니다..");
