@@ -11,17 +11,17 @@ namespace _32.Sorting
         // 불안정정렬
         public static void SelectionSort(int[] array)
         {
-            for (int i=0; i<array.Length; i++)
+            for (int i=0; i<array.Length; i++)// 배열의 첫 번째 요소부터 마지막까지 반복
             {
-                int minIndex = i;
+                int minIndex = i; // 현재 위치를 최소값의 인덱스로 설정
                 for (int j=0; j<array.Length; j++)
                 {
-                    if (array[j] < array[minIndex])
+                    if (array[j] < array[minIndex]) // 더 작은 값이 발견되면 최소값 인덱스를 갱신
                     {
                         minIndex = j;
                     }
                 }
-                Swep(array, i, minIndex);
+                Swep(array, i, minIndex);// 현재 위치와 최소값 위치를 교환
             }
         }
 
@@ -33,17 +33,17 @@ namespace _32.Sorting
         // 안정정렬   -  O
         public static void InsertionSort(int[] array)
         {
-            for (int i = 1; i < array.Length; i++)    // 처음부터 끝까지 반복 -> 0 맨 처음칸은 할 필요 없음. 정렬될 장소이기 때문
+            for (int i = 1; i < array.Length; i++)    // 두 번째 요소부터 시작 -> 맨 처음칸은 정렬될 장소이기 때문 필요없음
             {
-                for (int j = i; j > 0; j--)     // 적합한 위치에 들어갈때 까지 반복
+                for (int j = i; j > 0; j--)     // 현재 요소를 정렬된 부분과 비교하며 적합한 위치로 이동
                 {
-                    if (array[j - 1] > array[j])  // 다음숫자를 하나씩 꺼내서
+                    if (array[j - 1] > array[j])  // 다음숫자를 하나씩 꺼내서 앞의 요소가 더 큰지 비교
                     {
                         Swep(array, j - 1, j);   // 앞 숫자와 비교해서 더 작으면 한칸 뒤로 밀고
                     }
                     else
                     {
-                        break;                  // 작지 않으면 그자리에 넣기
+                        break;                  // 적합한 위치를 찾으면 종료
                     }
                 }
             }
@@ -57,13 +57,13 @@ namespace _32.Sorting
         // 안정정렬   -  O
         public static void BubbleSort(int[] array)
         {
-            for (int i = 1; i < array.Length; i++)  // 처음부터 끝까지 반복
+            for (int i = 1; i < array.Length; i++)  // 처음부터 끝까지 여러 번 스캔
             {
-                for (int j = 0; j < array.Length - i; j++)  // 하나씩 골라서 하는 작업을 반복
+                for (int j = 0; j < array.Length - i; j++)  // 인접한 두 요소를 비교
                 {
-                    if (array[j] > array[j + 1])    // 서로 인접한 두 데이터를 비교해서 더 크면
+                    if (array[j] > array[j + 1])    // 서로 인접한 두 데이터의 앞의 요소가 더 크면
                     {
-                        Swep(array, j, j + 1);
+                        Swep(array, j, j + 1);  // 교환
                     }
                 }
             }
@@ -79,13 +79,13 @@ namespace _32.Sorting
         public static void MergeSort(int[] array) => MergeSort(array, 0, array.Length - 1);
         public static void MergeSort(int[] array, int start, int end)
         {
-            if (start == end)
+            if (start == end)   // 배열이 하나의 요소만 남으면 반환
                 return;
 
             int mid = (start + end) / 2;
-            MergeSort(array, start, mid);
-            MergeSort(array, mid + 1, end);
-            Merge(array, start, mid, end);
+            MergeSort(array, start, mid);   // 왼쪽 부분 정렬
+            MergeSort(array, mid + 1, end);  // 오른쪽 부분 정렬
+            Merge(array, start, mid, end);  // 두 부분 병합
         }
 
         public static void Merge(int[] array, int start, int mid, int end)
