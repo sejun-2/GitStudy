@@ -233,7 +233,7 @@ namespace _32.Sorting
             Console.WriteLine(num);
 
             Random random = new Random();
-            int count = 200000;
+            int count = 100;
 
             int[] selectArray = new int[count];
             int[] insertArray = new int[count];
@@ -248,53 +248,69 @@ namespace _32.Sorting
             Console.WriteLine("랜덤 데이터: ");
             for (int i = 0; i < count; i++)
             {
-                int rand = random.Next(0, 1000000);
-                //Console.Write($""{rand, 3}"");   
+                int rand = random.Next(0, 100);     // 0부터 100미만 랜덤한 숫자 생성
+                Console.Write($"{rand, 3}");
 
-                //selectArray[i] = rand;
-                //insertArray[i] = rand;
+                selectArray[i] = rand;
+                insertArray[i] = rand;
                 bubbleArray[i] = rand;
                 mergeArray[i] = rand;
+                quickArray[i] = rand;
             }
             Console.WriteLine();
             Console.WriteLine();
 
-            //SelectionSort(selectArray);
-            //Console.WriteLine(""선택 정렬 결과 : "");
-            //foreach (int value in selectArray)
-            //{
-            //    Console.Write($""{value,3}"");
-            //}
-            //Console.WriteLine();
-            //
-            //InsertionSort(insertArray);
-            //Console.WriteLine(""삽입 정렬 결과 : "");
-            //foreach (int value in insertArray)
-            //{
-            //    Console.Write($""{value,3}"");
-            //}
-            //Console.WriteLine();
+            SelectionSort(selectArray);
+            Console.WriteLine("선택 정렬 결과 : ");
+            foreach (int value in selectArray)
+            {
+                Console.Write($"{value,3}");
+            }
+            Console.WriteLine();
+            
+            InsertionSort(insertArray);
+            Console.WriteLine("삽입 정렬 결과 : ");
+            foreach (int value in insertArray)
+            {
+                Console.Write($"{value,3}");
+            }
+            Console.WriteLine();
+
             Stopwatch sw1 = new Stopwatch();
             sw1.Start();
-            //BubbleSort(bubbleArray);
+            BubbleSort(bubbleArray);
             sw1.Stop();
+
             Console.WriteLine("버블 정렬 결과: { 0}", sw1.ElapsedTicks);
-            //foreach (int value in bubbleArray)
-            //{
-            //    Console.Write($""{value,3}"");
-            //}
+            foreach (int value in bubbleArray)
+            {
+                Console.Write($"{value,3}");
+            }
             Console.WriteLine();
 
             Stopwatch sw2 = new Stopwatch();
             sw2.Start();
             MergeSort(mergeArray);
             sw2.Stop();
+
             Console.WriteLine("병합 정렬 결과: { 0}", sw2.ElapsedTicks);
-            //foreach (int value in mergeArray)
-            //{
-            //    Console.Write($""{value,3}"");
-            //}
+            foreach (int value in mergeArray)
+            {
+                Console.Write($"{value,3}");
+            }
             Console.WriteLine();
+
+
+            QuickSort(quickArray);
+            Console.WriteLine("퀵 정렬 결과: ");
+            foreach (int value in quickArray)
+            {
+                Console.Write($"{ value,3}");
+            }
+            Console.WriteLine();
+
+
+
         }
 
 
