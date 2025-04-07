@@ -206,7 +206,7 @@ namespace _33.Searching
             Console.WriteLine("탐색 결과 : {0}", fixdIndex);
 
             int[] ints = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-            int binIndex = LinearSearch(ints, 5);
+            int binIndex = BinarySearch(ints, 5);
             Console.WriteLine("탐색 결과 : {0}", binIndex);
 
             bool[,] graph = new bool[8, 8];
@@ -252,7 +252,7 @@ namespace _33.Searching
             };
 
             Console.WriteLine("다익스트라");
-            Dijkstra(dijkstra, 0, out bool[] visited, out int[] parent, out int[] cost);
+            //Dijkstra(dijkstra, 0, out bool[] visited, out int[] parent, out int[] cost);
 
         }
     }
