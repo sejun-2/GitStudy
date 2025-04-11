@@ -6,6 +6,7 @@ namespace _35.Builder
     {
         static void Main(string[] args)
         {
+            // StringBuilder -> 매모리 효과적, 스트링을 만드는 과정을 가지고 있다가 마지막에 만듬
             StringBuilder stringBuilder = new StringBuilder();  // 스트링 빌더를 사용하여 문자열을 조합함
             stringBuilder.AppendLine("안녕하세요")   // AppendLine() 한줄 붙이기
                 .AppendLine("반갑습니다.")   // AppendLine() 메소드를 사용하여 줄바꿈을 추가함
